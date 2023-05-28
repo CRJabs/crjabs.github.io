@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.floating_btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+}
+
+.container {
+  width: 100%;
+  margin: 20vh auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  background-image: url(bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+p {
+  color: #002e5a;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  color: #002e5a;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#title-label {
+  font-size: 2.3rem;
+}
+
+form {
+  background: #fff;
+  padding: 2.5rem 2.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.5rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: #002e5a;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 0;
+}
+
+button:hover {
+  background-color: #316ca3;
+  transition: background-color 0.05s;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+#male,
+#female,
+#other {
+  color: #495057;
+  font-size: 1.4rem;
+}
+
+textarea {
+  width: 100%;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  resize: none;
+}
+
+textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
