@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Slab:wght@100&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.3;
+        color: white;
+      }
+
+      .floating_btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
+      }
+
+      h1 {
+        font-family: "Outfit", sans-serif;
+        color: #333;
+        text-align: center;
+        font-size: 6rem;
+      }
+
+      h2 {
+        font-family: "Outfit", sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      p {
+        font-family: "Outfit", sans-serif;
+        color: white;
+        text-align: center;
+      }
+
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom-style: groove;
+        border-color: #333;
+        background: white;
+        z-index: 10;
+      }
+
+      #front_page {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(90, 90, 90, 0.3);
+      }
+
+      .mapa {
+        width: 63vw;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: 37vw;
+      }
+
+      area:hover {
+        cursor: pointer;
+      }
+
+      area[title]:hover:after {
+        content: attr(title);
+        padding: 50px 20px 50px 20px;
+        color: rgb(57, 72, 85);
+        background: white;
+        position: fixed;
+        z-index: 9999;
+        left: 80.65%;
+        top: 46%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 20px;
+      }
+
+      .info_sq {
+        position: fixed;
+        padding-top: 100px;
+        padding-right: 40px;
+        padding-left: 30px;
+        left: 61.65%;
+        width: 36.5vw;
+        height: 100vh;
+        background: rgb(57, 72, 85);
+        background: linear-gradient(
+          168deg,
+          rgba(57, 72, 85, 1) 0%,
+          rgba(38, 58, 59, 1) 100%
+        );
+      }
+
+      .info_sq,
+      p {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+      }
+
+      .info_sq,
+      h2 {
+        font-family: "Outfit", sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 6rem;
+      }
+
+      .info_sq,
+      h6 {
+        font-family: "Quicksand", sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 80px;
+      }
+
+      #top {
+        position: fixed;
+        top: 0px;
+        height: 6vh;
+        width: 100%;
+        background: white;
+        z-index: 99;
+      }
+
+      #bottom {
+        position: fixed;
+        bottom: 0px;
+        height: 6vh;
+        width: 100%;
+        background: white;
+        z-index: 99;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </head>
+
+  <body>
+    <section id="Front_page">
+      <div id="top"></div>
+      <div class="info_sq">
+        <br />
+        <br />
+        <h6>Welcome to the</h6>
+        <h2>MAP OF MABINI!</h2>
+        <hr />
+        <p>Hover ( or click ) on a barangay to learn more!</p>
+        <hr />
+      </div>
+      <div id="bohol-map">
+        <img
+          class="mapa"
+          src="mga pictures/mabini.jpg"
+          alt="map"
+          usemap="#map"
+        />
+
+        <map name="map">
+          <area
+            shape="circle"
+            coords="790, 242, 70"
+            alt="paraiso"
+            title="PARAISO - Population: 802 Households: 190 Schools: 1"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/paraiso.html"
+          />
+
+          <area
+            shape="circle"
+            coords="682, 379, 75"
+            alt="san jose"
+            title="SAN JOSE - Population: 1484 Households: 341 Schools: 2  "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/san-jose.html"
+          />
+
+          <area
+            shape="circle"
+            coords="813, 527, 40"
+            alt="del mar"
+            title="DEL MAR - Population: 831  Households: 170 Schools: 0 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/del-mar.html"
+          />
+
+          <area
+            shape="circle"
+            coords="572, 547, 70"
+            alt="san isidro"
+            title="SAN ISIDRO - Population: 1702  Households: 337 Schools: 1 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/san-isidro.html"
+          />
+
+          <area
+            shape="circle"
+            coords="422, 597, 60"
+            alt="san roque"
+            title="SAN ROQUE - Population: 2718  Households: 602 Schools: 2 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/san-roque.html"
+          />
+
+          <area
+            shape="circle"
+            coords="392, 820, 80"
+            alt="abaca"
+            title="ABACA - Population: 2538  Households: 564 Schools: 1 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/abaca.html"
+          />
+
+          <area
+            shape="circle"
+            coords="743, 735, 30"
+            alt="san rafael"
+            title="SAN RAFAEL - Population: 862 Households: 158 Schools: 0 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/san-rafael.html"
+          />
+
+          <area
+            shape="circle"
+            coords="813, 725, 40"
+            alt="valaga"
+            title="VALAGA - Population: 952 Households: 183 Schools: 0"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/valaga.html"
+          />
+
+          <area
+            shape="circle"
+            coords="903, 727, 50"
+            alt="lungsoda-an"
+            title="LUNGSODA-AN - Population: 1152 Households: 242 Schools: 1 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/lungsoda-an.html"
+          />
+
+          <area
+            shape="circle"
+            coords="1052, 727, 70"
+            alt="baybayon"
+            title="BAYBAYON - Population: 1396  Households: 291 Schools: 1"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/baybayon.html"
+          />
+
+          <area
+            shape="circle"
+            coords="632, 929, 70"
+            alt="aguipo"
+            title="AGUIPO - Population: 1191 Households: 302 Schools: 1 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/aguipo.html"
+          />
+
+          <area
+            shape="circle"
+            coords="822, 867, 70"
+            alt="abad santos"
+            title="ABAD SANTOS - Population: 605 Households: 117 Schools: 0"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/abad-santos.html"
+          />
+
+          <area
+            shape="circle"
+            coords="962, 927, 50"
+            alt="tambo"
+            title="TAMBO - Population: 786 Households: 201 Schools: 1"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/tambo.html"
+          />
+
+          <area
+            shape="circle"
+            coords="1052, 847, 70"
+            alt="marcelo"
+            title="MARCELO - Population: 1005  Households: 214 Schools: 0"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/marcelo.html"
+          />
+
+          <area
+            shape="circle"
+            coords="962, 1040, 70"
+            alt="concepcion"
+            title="CONCEPCION - Population: 1338  Households: 278 Schools: 1"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/concepcion.html"
+          />
+
+          <area
+            shape="circle"
+            coords="845, 1090, 70"
+            alt="minol"
+            title="MINOL - Population: 1457 Households: 306 Schools: 2 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/minol.html"
+          />
+
+          <area
+            shape="circle"
+            coords="732, 1045, 70"
+            alt="cawayanan"
+            title="CAWAYANAN - Population: 1739 Households: 365 Schools: 0 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/cawayanan.html"
+          />
+
+          <area
+            shape="circle"
+            coords="652, 1157, 40"
+            alt="poblacion I"
+            title="POBLACION I - Population: 1412  Households: 307 Schools: 0"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/poblacion-i.html"
+          />
+
+          <area
+            shape="circle"
+            coords="562, 1157, 45"
+            alt="poblacion II"
+            title="POBLACION II - Population: 1612 Households: 386 Schools: 0 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/poblacion-ii.html"
+          />
+
+          <area
+            shape="circle"
+            coords="422, 1107, 65"
+            alt="tankigan"
+            title="TANKIGAN - Population: 1590 Households: 332 Schools: 2"
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/tangkigan.html"
+          />
+
+          <area
+            shape="circle"
+            coords="272, 1087, 55"
+            alt="cabidian"
+            title="CABIDIAN - Population: 884 Households: 238 Schools: 0 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/cabidian.html"
+          />
+
+          <area
+            shape="circle"
+            coords="162, 1127, 40"
+            alt="bulawan"
+            title="BULAWAN - Population: 638 Households: 130 Schools: 0 "
+            href="https://www.philatlas.com/visayas/r07/bohol/mabini/bulawan.html"
+          />
+        </map>
+      </div>
+      <div id="bottom"></div>
+    </section>
+
+    <div class="floating_btn">
+      <a href="../FinalProject/Homepage.html" target="_top">
+        <img src="../home.png" style="height: 63px" />
+      </a>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    COORDINATE ADJUSTMENT
+
+    more 1st # - move right
+    less 1st # - move left
+
+    more 2nd # - move down
+    less 2nd # - move up    
+-->

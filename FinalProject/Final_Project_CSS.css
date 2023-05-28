@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Slab:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #f7f7f7;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav {
+  overflow: hidden;
+  padding: 30px 10px;
+  transition: 0.5s;
+  position: fixed;
+  width: 62vw;
+  top: 0;
+  z-index: 99;
+  background: rgba(255, 255, 255);
+}
+
+.nav a {
+  float: left;
+  text-align: right;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.nav h1 {
+  margin-left: 5%;
+  margin-top: 18px;
+  font-family: "Outfit", sans-serif;
+  float: left;
+  color: #333;
+  font-size: 5rem;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 23px;
+  margin-right: 4%;
+  width: 50%;
+  float: right;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.nav-list a {
+  display: block;
+  padding: 2rem;
+  border-radius: 10%;
+}
+
+.nav-list a:hover {
+  background: rgba(90, 90, 90, 0.15);
+  transition: background 0.2s;
+}
+
+#start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+#start > p {
+  font-size: 13px;
+  font-weight: 200;
+  color: #333;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 2px;
+  margin-left: -58%;
+  z-index: 50;
+}
+
+#start > h1 {
+  font-family: "Outfit", sans-serif;
+  color: #333;
+  font-size: 15rem;
+  letter-spacing: -5px;
+  margin-top: 15%;
+  margin-left: -45%;
+  z-index: 50;
+}
+
+#start > a {
+  margin-left: -58%;
+  z-index: 50;
+}
+
+#start > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+#whitebg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 55vw;
+  z-index: 0;
+}
+
+#information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260vh;
+  background-image: url(testbg3.png);
+  background-size: cover;
+}
+
+#information > p {
+  font-size: 15px;
+  font-weight: 200;
+  color: #333;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 2px;
+}
+
+#information > h1 {
+  font-family: "Gloock", serif;
+  font-size: 120px;
+  letter-spacing: 5px;
+  margin-top: -20px;
+  text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+}
+
+.text-block {
+  display: block;
+  width: 70%;
+  padding: 7%;
+  margin-top: 10%;
+  margin-left: -15%;
+  margin-bottom: 10%;
+}
+
+.text-block h1 {
+  margin-left: 10%;
+  font-size: 3rem;
+  color: #333;
+}
+
+.text-block h2 {
+  margin-left: 10%;
+  font-size: 7rem;
+  color: #333;
+}
+
+.text-block p {
+  color: #333;
+  margin-left: 15%;
+  max-width: 85%;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.text-block2 {
+  display: block;
+  width: 65%;
+  padding: 7%;
+  margin-top: 10%;
+  margin-left: 50%;
+  margin-bottom: 10%;
+}
+
+.text-block2 h1 {
+  margin-left: 58%;
+  font-size: 3rem;
+  color: #333;
+}
+
+.text-block2 h2 {
+  margin-left: 24%;
+  font-size: 7rem;
+  color: #333;
+}
+
+.text-block2 p {
+  color: #333;
+  margin-right: 10%;
+  max-width: 85%;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.text-grid {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.edubg {
+  background-image: url(testbg.png);
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  bottom: -273%;
+  box-shadow: 0px 0px 30px #939393;
+  z-index: 0;
+}
+
+.text-grid1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1820px;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  z-index: 10;
+}
+
+.block h1 {
+  margin-left: 10%;
+  font-size: 5rem;
+  color: #333;
+}
+
+.block p {
+  color: #333;
+  margin-left: 15%;
+  max-width: 85%;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.container {
+  width: 100%;
+  background-color: #fff;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.html {
+  width: 76%;
+  background-color: #1e2978;
+}
+.css {
+  width: 69%;
+  background-color: #fed515;
+}
+.js {
+  width: 15%;
+  background-color: #ff1f5b;
+}
+
+.image1 {
+  display: block;
+  position: absolute;
+  right: 10%;
+  top: 125%;
+}
+
+.image2 {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 205%;
+  width: 150%;
+  height: auto;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  height: 80vh;
+  width: 100vw;
+}
+
+.projects-section > h2 {
+  font-family: inherit;
+  font-size: 5rem;
+  max-width: 1280px;
+  margin: 5% auto 6rem auto;
+  color: #333;
+  border-bottom: 0.2rem solid white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 5rem;
+  width: 100%;
+  max-width: 1610px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project {
+  background: #333;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 1.5px;
+}
+
+.project:hover {
+  transform: translateY(5px);
+  transition: transform 0.2s;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-family: inherit;
+  font-size: 1.8rem;
+  padding: 2rem 0.5rem;
+  color: white;
+}
+
+.arrow {
+  transform: rotateZ(180deg);
+  height: 50px;
+}
+
+#end-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(end\ bg.jpg);
+  background-size: cover;
+}
+
+#end-section > p {
+  font-size: 15px;
+  color: #333;
+  font-family: "Outfit", sans-serif;
+}
+
+#end-section > h1 {
+  font-family: "Outfit", sans-serif;
+  letter-spacing: -5px;
+  font-size: 120px;
+  margin-top: -20px;
+  color: #333;
+}
+
+.accounts {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accounts img {
+  height: 100px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.accounts img:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s;
+}

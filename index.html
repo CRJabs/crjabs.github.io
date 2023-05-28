@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="FinalProject/Final_Project_CSS.css" />
+  <link rel="icon" type="image/x-icon" href="icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<main>
+  <body>
+    <nav title="navigation-bar" class="nav" id="navbar">
+      <h1>Personal Portfolio</h1>
+
+      <div class="navbar-right">
+        <ul class="nav-list">
+          <li>
+            <a href="#start">HOME</a>
+          </li>
+          <li>
+            <a href="#information">ABOUT</a>
+          </li>
+          <li>
+            <a href="#projects"> WORKS</a>
+          </li>
+          <li>
+            <a href="#end-section">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("navbar").style.padding = "0px 0px";
+          document.getElementById("navbar").style.width = "100vw";
+          document.getElementById("navbar").style.boxShadow =
+            "0px 0px 30px #939393";
+        } else {
+          document.getElementById("navbar").style.padding = "30px 10px";
+          document.getElementById("navbar").style.width = "62vw";
+          document.getElementById("navbar").style.boxShadow =
+            "0px 0px 30px #ffffff";
+        }
+      }
+    </script>
+
+    <section title="start" id="start">
+      <h1>Hey, I'm Cliff</h1>
+      <p>I'M A JUNIOR WEB DEVELOPER. LEARN MORE ABOUT ME BELOW</p>
+      <a href="#information">
+        <img src="FinalProject/black arrow.png" style="height: 35px" />
+      </a>
+      <div id="whitebg"></div>
+      <img src="FinalProject/nawng 2.jpg" />
+    </section>
+
+    <section title="information" id="information">
+      <div class="text-grid">
+        <div class="text-block">
+          <h1>About Me...</h1>
+          <h2>I'm a Junior Web Developer!</h2>
+          <br />
+          <p>
+            I've started learning Software Development mid last year and 
+            has since been inconsistently honing my craft! I've also always 
+            been interested in graphic design but never really managed to learn 
+            it properly. As of now I have garnered experience in HTML, CSS and JS. 
+            Just the basics but I am eager and dedicated to learn more!
+          </p>
+        </div>
+
+        <div class="image1">
+          <img src="FinalProject/comp.png">
+        </div>
+
+        <div class="text-block2">
+          <h1>But why web dev?</h1>
+          <h2>Because its Fun!</h2>
+          <br />
+          <p>
+            ...and also because I wanted to learn more about software! 
+            It's a great way for me to express creativity whilst still staying 
+            on the field of tech. I also wanted to explore different branches of 
+            tech and not just focus on hardware.
+          </p>
+        </div>   
+
+        <div class="image2">
+          <img src="FinalProject/astro1.png">
+        </div>
+
+      </div>
+      <div class="text-grid1">
+        <div class="block">
+          <h1>My Educational Attainments:</h1>
+          <br />
+          <br><p>
+            Elementary: 
+          </p>
+          <p>
+            2010 - 2013&emsp;->&emsp;Liceo De Cagayan University (Gr. 1 - 3)<br>
+            2013 - 2015&emsp;->&emsp;Banilad Elementary School (Gr. 3 - 5)<br>
+            2015 - 2016&emsp;->&emsp;Babag Elementary School (Gr. 6)<br>
+          </p>
+          <br>
+          <p>
+           High School: 
+          </p>
+          <p>
+            2016 - 2018&emsp;->&emsp;Science and Technology Education Center (Gr. 7 - 8)<br>
+            2018 - 2020&emsp;->&emsp;University of Cebu - Lapu-Lapu and Mandaue (Gr. 9 - 10)<br>
+          </p>
+          <br>
+          <p>
+            Senior High School: 
+          </p>
+          <p>
+            2020 - 2021&emsp;->&emsp;AMA University (Gr. 11)<br>
+            2021 - 2022&emsp;->&emsp;University of Bohol (Gr. 12)<br>
+          </p>
+          <br>
+          <p>
+            College: 
+          </p>
+          <p>
+            2021 - Present&emsp;->&emsp;University of Bohol (1st Year BSCS Student)<br>
+          </p>
+        </div>
+        <div class="block">
+          <h1>My Skills Overview:</h1>
+          <br />
+          <br />
+          <p>HTML</p>
+          <div class="container">
+            <div class="skills html">76%</div>
+          </div>
+          
+          <p>CSS</p>
+          <div class="container">
+            <div class="skills css">69%</div>
+          </div>
+          
+          <p>JavaScript</p>
+          <div class="container">
+            <div class="skills js">15%</div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="edubg"></div>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h2>TAKE A LOOK AT A FEW OF MY SELECTED WORKS</h2>
+      <div class="projects-grid">
+        <a
+          href="Activity 2/AboutMe.html"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="FinalProject/aboutme.png" alt="project" />
+          <p class="project-title">About Me WebPage</p>
+        </a>
+
+        <a
+          href="Activity 4/Family.html"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="FinalProject/family.png" alt="project" />
+          <p class="project-title">My Family WebPage</p>
+        </a>
+
+        <a
+          href="Activity 9/myVideo.html"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="FinalProject/vlo.png" alt="project" />
+          <p class="project-title">Life in UB Vlog</p>
+        </a>
+
+        <a
+          href="MIDTERM/Midterm Project.html"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="FinalProject/midterm.png" alt="project" />
+          <p class="project-title">Midterm Project</p>
+        </a>
+      </div>
+    </section>
+
+    <section title="end-section" id="end-section">
+      <h1> Lets get in touch</h1>
+      <table class="accounts"> 
+				<tr>
+					<td> <a href="https://web.facebook.com/cliffraycee.jabines" target="_blank"> <img src="FinalProject/facebook.png"> </a></td>
+					<td> <a href="https://www.instagram.com/onthecliffside/" target="_blank"><img src="FinalProject/instagram.png"> </a></td>
+					<td> <a href="https://www.youtube.com/channel/UCjbvf_aFnkP1tZnePqB4XDQ" target="_blank"><img src="FinalProject/youtube.png"> </a> </td>
+					<td> <a href="https://twitter.com/cleppord" target="_blank"><img src="FinalProject/twitter.png"> </a> </td>
+					<td> <a href="https://www.linkedin.com/in/cliff-raycee-abb06821a/" target="_blank"><img src="FinalProject/linkedin.png"> </a> </td>
+					<td> <a href="FinalProject/Homepage.html" target="_top"><img src="home.png" style="height: 63px"> </a> </td>
+				</tr>
+			<table>
+    </section>
+  </body>
+</main>
