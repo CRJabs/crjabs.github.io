@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Slab:wght@100&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+        scroll-behavior: smooth;
+      }
+
+      .floating_btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.3;
+        color: white;
+      }
+
+      html::-webkit-scrollbar {
+        display: none;
+      }
+
+      h1 {
+        font-family: "Gloock", serif;
+        color: #333;
+        text-align: center;
+        font-size: 3rem;
+      }
+
+      p {
+        font-family: "Outfit", sans-serif;
+        color: #333;
+        text-align: center;
+      }
+
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-image: url("bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      table,
+      td,
+      th {
+        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+        border-collapse: collapse;
+        background-color: rgba(75, 75, 75, 0.5);
+        border: 3px solid rgb(255, 255, 255);
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+      }
+
+      th {
+        height: 10vh;
+        font-size: 4rem;
+      }
+
+      #col1 {
+        height: 61vh;
+        width: 20vw;
+      }
+
+      #col2 {
+        height: 61vh;
+        width: 80vw;
+      }
+
+      #col1 > iframe {
+        overflow: auto;
+        width: 20vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="floating_btn">
+      <a href="../FinalProject/Homepage.html" target="_top">
+        <img src="../home.png" style="height: 63px" />
+      </a>
+    </div>
+    <section title="contact-section" id="contact" class="contact-section">
+      <table class="accounts">
+        <tr>
+          <th colspan="2">ACTIVITY 6</th>
+        </tr>
+        <tr>
+          <td id="col1">
+            <iframe
+              src="photos.html"
+              title="W3Schools Free Online Web Tutorials"
+              width="100%"
+              height="100%"
+            >
+            </iframe>
+          </td>
+          <td id="col2">
+            <iframe src="default.html" name="Rpanel" width="100%" height="100%">
+            </iframe>
+          </td>
+        </tr>
+      </table>
+      ``
+    </section>
+  </body>
+</html>

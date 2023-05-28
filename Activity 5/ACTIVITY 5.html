@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Slab:wght@100&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: white;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    h1 {
+      font-family: "Gloock", serif;
+      color: white;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-family: "Outfit", sans-serif;
+      color: #333;
+      text-align: center;
+      font-size: 2rem;
+    }
+
+    p {
+      font-family: "Outfit", sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-bottom-style: groove;
+      padding: 10px;
+      z-index: 10;
+    }
+
+    #welcome-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          25deg,
+          rgba(90, 90, 90, 0.1),
+          rgba(90, 90, 90, 1)
+        ),
+        url("welcomebg.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #welcome-section > p {
+      font-size: 15px;
+      font-weight: 200;
+      color: white;
+      font-family: "Outfit", sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    #welcome-section > h1 {
+      font-family: "Gloock", serif;
+      font-size: 120px;
+      letter-spacing: 5px;
+      margin-top: -20px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    #message-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          245deg,
+          rgba(128, 128, 128, 0.2),
+          rgba(192, 192, 192, 0.6)
+        ),
+        url("messagebg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+
+    .inst {
+      width: 30%;
+      position: relative;
+      top: 5%;
+      left: 45%;
+    }
+
+    .square {
+      width: 800px;
+      height: 650px;
+      background: hsl(0, 0%, 21%);
+      border-radius: 8px;
+      opacity: 0;
+      transform: scale(1.2);
+    }
+
+    .square > p {
+      font-size: 17px;
+      font-weight: 200;
+      margin-left: 15%;
+      margin-right: 15%;
+      padding-top: 150px;
+      color: white;
+      font-family: "Outfit", sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .square {
+        transition: opacity 1.5s ease, transform 1.5s ease;
+      }
+    }
+
+    .square-transition {
+      position: relative;
+      left: -90%;
+      opacity: 0.8;
+      transform: none;
+    }
+
+    #end-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .sliding-bg {
+      background: url("lapis.jpg") repeat-x;
+      height: 100vh;
+      width: 4320px;
+      animation: slide 10s linear infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        transform: translate3d(-1080px, 0, 0);
+      }
+    }
+
+    .floating_btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+    }
+  </style>
+
+  <head>
+    <body>
+      <nav title="navigation-bar" class="nav">
+        <h2>CSS UNITS, COLORS, AND BG IMAGES</h2>
+      </nav>
+
+      <div class="floating_btn">
+        <a href="../FinalProject/Homepage.html" target="_top">
+          <img src="../home.png" style="height: 63px" />
+        </a>
+      </div>
+
+      <section title="welcome-section" id="welcome-section">
+        <h1>Lorem, ipsum dolor.</h1>
+      </section>
+
+      <section title="message-section" id="message-section">
+        <img class="inst" src="keyb.png" alt="instrument" />
+
+        <div class="square-wrapper">
+          <div class="square square-transition">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              totam eius, molestiae delectus alias vero?
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              totam eius, molestiae delectus alias vero?
+              <br />
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+              totam eius, molestiae delectus alias vero? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Neque totam eius, molestiae
+              delectus alias vero?
+            </p>
+          </div>
+        </div>
+
+        <script>
+          const square = document.querySelector(".square");
+          square.classList.remove("square-transition");
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                square.classList.add("square-transition");
+                return;
+              }
+
+              square.classList.remove("square-transition");
+            });
+          });
+
+          observer.observe(document.querySelector(".square-wrapper"));
+        </script>
+      </section>
+
+      <section title="end-section" id="end-section">
+        <div class="sliding-bg"></div>
+      </section>
+    </body>
+  </head>
+</head>

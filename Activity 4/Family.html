@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto+Slab:wght@100&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    .floating_btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
+
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Outfit", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: white;
+    }
+
+    h1,
+    h2 {
+      font-family: "Gloock", serif;
+      color: white;
+      text-align: center;
+      font-size: 6rem;
+    }
+
+    p {
+      font-family: "Outfit", sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: flex-end;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(90, 90, 90, 0.4);
+      z-index: 10;
+    }
+
+    .nav-list {
+      display: flex;
+      margin-right: 2rem;
+    }
+
+    .nav-list a {
+      display: block;
+      font-size: 2rem;
+      padding: 2rem;
+    }
+
+    .nav-list a:hover {
+      background: rgba(90, 90, 90, 0.8);
+      transition: background 0.3s;
+    }
+
+    #welcome-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          25deg,
+          rgba(90, 90, 90, 0.2),
+          rgba(90, 90, 90, 0.3)
+        ),
+        url("welcomebg.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #welcome-section > p {
+      font-size: 15px;
+      font-weight: 200;
+      color: white;
+      font-family: "Outfit", sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    #welcome-section > h1 {
+      font-family: "Gloock", serif;
+      font-size: 120px;
+      letter-spacing: 5px;
+      margin-top: -20px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    #message-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          125deg,
+          rgba(128, 128, 128, 0.4),
+          rgba(192, 192, 192, 0.3)
+        ),
+        url("messagebg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 110%;
+    }
+
+    #message-section > p {
+      font-size: 17px;
+      font-weight: 200;
+      margin-left: 15%;
+      margin-right: 15%;
+      color: white;
+      font-family: "Outfit", sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    #message-section > h1 {
+      font-family: "Gloock", serif;
+      font-size: 80px;
+      letter-spacing: 5px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    mark {
+      color: white;
+      background-color: rgba(90, 90, 90, 0.2);
+    }
+
+    #family-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: rgb(128, 180, 180);
+      background: radial-gradient(
+        circle,
+        rgba(128, 180, 180, 1) 0%,
+        rgba(91, 95, 99, 1) 100%
+      );
+    }
+
+    #family-section > div {
+      position: relative;
+      width: 79.15%;
+      height: 100vh;
+      background-color: rgba(256, 256, 256, 0.25);
+    }
+
+    .first h1 {
+      font-family: "Gloock", serif;
+      font-size: 65px;
+      margin-top: 130px;
+      margin-bottom: 20px;
+      margin-left: -45%;
+      text-align: center;
+      letter-spacing: 5px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+      transform: rotateZ(-3deg);
+    }
+
+    .first dt {
+      font-family: "Outfit", sans-serif;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 200;
+      color: white;
+      max-width: 35%;
+      margin-left: 10%;
+    }
+
+    .first dd {
+      font-family: "Outfit", sans-serif;
+      font-size: 17px;
+      font-weight: 200;
+      color: white;
+      max-width: 35%;
+      margin-left: 10%;
+    }
+
+    .first img {
+      max-width: 50%;
+      height: 70vh;
+      position: absolute;
+      top: 120px;
+      right: 120px;
+      transform: rotateZ(3deg);
+    }
+
+    .first figcaption {
+      font-size: 12px;
+      position: absolute;
+      bottom: 80px;
+      right: 300px;
+      transform: rotateZ(3deg);
+    }
+
+    .first aside {
+      width: 30%;
+      padding-left: 15px;
+      margin-left: 55px;
+      position: absolute;
+      bottom: 65px;
+      left: 110px;
+      background-color: rgba(256, 256, 256, 0.25);
+    }
+
+    details > p {
+      color: white;
+    }
+
+    .second h1 {
+      font-family: "Gloock", serif;
+      font-size: 90px;
+      margin-top: 130px;
+      margin-bottom: 20px;
+      margin-left: -41%;
+      text-align: center;
+      letter-spacing: 5px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+      transform: rotateZ(-3deg);
+    }
+
+    .second dt {
+      font-family: "Outfit", sans-serif;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 200;
+      color: white;
+      max-width: 35%;
+      margin-left: 10%;
+    }
+
+    .second dd {
+      font-family: "Outfit", sans-serif;
+      font-size: 17px;
+      font-weight: 200;
+      color: white;
+      max-width: 35%;
+      margin-left: 10%;
+    }
+
+    .second img {
+      max-width: 75%;
+      height: 70vh;
+      position: absolute;
+      top: 120px;
+      right: 100px;
+      transform: rotateZ(3deg);
+    }
+
+    .second figcaption {
+      font-size: 12px;
+      position: absolute;
+      bottom: 90px;
+      right: 290px;
+      transform: rotateZ(3deg);
+    }
+
+    .second aside {
+      width: 30%;
+      padding-left: 15px;
+      margin-left: 55px;
+      position: absolute;
+      bottom: 120px;
+      left: 110px;
+      background-color: rgba(256, 256, 256, 0.25);
+    }
+
+    .third h1 {
+      font-family: "Gloock", serif;
+      font-size: 90px;
+      margin-top: 130px;
+      margin-bottom: 20px;
+      margin-left: -43%;
+      text-align: center;
+      letter-spacing: 5px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+      transform: rotateZ(-3deg);
+    }
+
+    .third dt {
+      font-family: "Outfit", sans-serif;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 200;
+      color: white;
+      max-width: 35%;
+      margin-left: 10%;
+    }
+
+    .third dd {
+      font-family: "Outfit", sans-serif;
+      font-size: 17px;
+      font-weight: 200;
+      color: white;
+      max-width: 35%;
+      margin-left: 10%;
+    }
+
+    .third img {
+      max-width: 75%;
+      height: 70vh;
+      position: absolute;
+      top: 120px;
+      right: 150px;
+      transform: rotateZ(3deg);
+    }
+
+    .third figcaption {
+      font-size: 12px;
+      position: absolute;
+      bottom: 90px;
+      right: 290px;
+      transform: rotateZ(3deg);
+    }
+
+    .third aside {
+      width: 30%;
+      padding-left: 15px;
+      margin-left: 55px;
+      position: absolute;
+      bottom: 120px;
+      left: 110px;
+      background-color: rgba(256, 256, 256, 0.25);
+    }
+
+    .album {
+      text-align: center;
+      padding: 10rem 2rem;
+      background: rgb(256, 256, 256);
+    }
+
+    .album > h2 {
+      font-family: "Outfit", sans-serif;
+      color: #333333;
+      font-size: 19px;
+      max-width: 510px;
+      margin: 0 auto 6rem auto;
+      border-bottom: 0.2rem solid #333333;
+    }
+
+    .album > p {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    dialog {
+      margin: 20px auto 20px auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 92.5vh;
+      background-image: linear-gradient(
+          25deg,
+          rgba(90, 90, 90, 0.4),
+          rgba(90, 90, 90, 0.5)
+        ),
+        url("contactbg.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .contact-section-header > h2 {
+      font-family: "Gloock", serif;
+      font-size: 140px;
+      margin-top: -30px;
+      margin-bottom: -30px;
+      letter-spacing: 5px;
+      color: white;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    .contact-section-header > p {
+      font-family: "Outfit", sans-serif;
+      color: white;
+      font-size: 17px;
+      letter-spacing: px;
+      text-shadow: 2px 2px rgba(90, 90, 90, 0.4);
+    }
+
+    .accounts {
+      border-collapse: collapse;
+      border: 3px solid #ffffff;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .accounts img {
+      height: 50px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .accounts img:hover {
+      transform: translateY(-5px);
+      transition: transform 0.2s;
+    }
+
+    footer {
+      font-weight: 300;
+      font-size: 2rem;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 2rem;
+      background-image: linear-gradient(#8c8c8c, #7c7c7c);
+      border-top: 4px solid #fff;
+    }
+
+    footer > p {
+      font-family: "Outfit", sans-serif;
+      color: white;
+      font-size: 17px;
+      letter-spacing: px;
+    }
+
+    footer i {
+      vertical-align: middle;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    abbr {
+      text-decoration: none;
+    }
+  </style>
+
+  <base href="#welcome-section" target="_top" />
+</head>
+
+<main>
+  <body>
+    <!-- Navigation bar here -->
+    <nav title="navigation-bar" class="nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">HOME</a>
+        </li>
+        <li>
+          <a href="#message-section">INTRODUCTION</a>
+        </li>
+        <li>
+          <a href="#family-section"> MY FAMILY</a>
+        </li>
+        <li>
+          <a href="#album">MORE</a>
+        </li>
+        <li>
+          <a href="#contact">CONTACTS</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="floating_btn">
+      <a href="../FinalProject/Homepage.html" target="_top">
+        <img src="../home.png" style="height: 63px" />
+      </a>
+    </div>
+
+    <!-- Front page or Welcome section -->
+    <section title="welcome-section" id="welcome-section">
+      <p>INTRODUCING MY</p>
+      <h1>FAMILY</h1>
+      <p>ALL PHOTOS USED TAKEN BY ME</p>
+    </section>
+
+    <!-- Initial message describing the page -->
+    <section title="message-section" id="message-section">
+      <p>
+        THIS PAGE WILL BE FEATURING <mark>THE <b>CLOSEST</b> PEOPLE</mark> I
+        HAVE IN MY LIFE, THEY ARE THE ONES THAT STOOD BY MY SIDE DURING TIMES OF
+        HARDSHIPS AND STRUGGLES AND STAYED EVEN LONG AFTER.
+        <del> I definitely still talk to some of these people </del>
+      </p>
+      <br />
+      <h1>COME TAKE A LOOK!</h1>
+      <br />
+      <p>NOTE :</p>
+      <blockquote cite=" ">
+        I couldn't really fit all of my friends and family here.
+      </blockquote>
+    </section>
+
+    <!-- Start of Family Pictures -->
+    <section title="family-section" id="family-section">
+      <div title="first" class="first">
+        <article>
+          <h1>
+            <em>YOUNGER<wbr /><br />BROTHER</em>
+          </h1>
+          <dl>
+            <dt>
+              <bdi><ins>Dwight Andrew B. Jabines</ins></bdi>
+            </dt>
+            <br />
+
+            <dd>
+              My brother is quite unique. It's clear in the photo but in case it
+              isn't he has down syndrome. He was born on the 17<sup>th</sup> of
+              June, 2004. Surprisingly enough for a downs patient he functions
+              almost normally with even the potential to be better than me in
+              most things.
+
+              <details>
+                <summary>more info</summary>
+                <p>
+                  My bro spends all day <time>24/7</time> just chilling at home.
+                  He's living the life
+                </p>
+              </details>
+
+              <aside>
+                my brother can't actually speak in complete sentences. We used
+                to joke around and say he says things in reverse like
+                <i><bdo dir="rtl"> this way which was funny </bdo></i>
+              </aside>
+            </dd>
+          </dl>
+        </article>
+
+        <figure>
+          <img src="fam/dwight.jpg" />
+          <figcaption>Photo of my brother</figcaption>
+        </figure>
+      </div>
+      <hr />
+      <div title="second" class="second">
+        <article>
+          <h1><em>BIG SISTER</em></h1>
+          <dl>
+            <dt>
+              <bdi><u>Raven Reece B. Jabines</u></bdi>
+            </dt>
+            <br />
+
+            <dd>
+              This is my big sister. Born on the 6<sup>th</sup> of February,
+              2002. She's the one that got all the artistic skills between the
+              three of us. She's currently working part-time abroad in germany
+              whilst also studying college there.
+
+              <details>
+                <summary>more info</summary>
+                <p>
+                  Fun fact between us siblings: since we were born just months
+                  apart, it's pretty easy to know our ages since we all just
+                  line up (18 turning 19 [brother], 19 turning 20 [me], 21
+                  [sister] )
+                </p>
+              </details>
+
+              <aside>
+                Between the three of us. She's the most creative and once worked
+                freelance as a creative manager / artist.
+              </aside>
+            </dd>
+          </dl>
+        </article>
+        <figure>
+          <img src="fam/raven.png" />
+          <figcaption>Photo of my sister</figcaption>
+        </figure>
+      </div>
+      <hr />
+      <div title="third" class="third">
+        <section>
+          <h1><em>PARENTS</em></h1>
+          <dl>
+            <dt>
+              <bdi><u>Jun Marieth B. Jabines & Ariel R. Jabines</u></bdi>
+            </dt>
+            <br />
+
+            <dd>
+              These are my parents. Born 5<sup>th</sup> of January, 1980 and
+              10<sup>th</sup> of April, 1979 respectively. They're in their
+              middle ages but still can have some fair bit of fun regardless.
+
+              <details>
+                <summary>more info</summary>
+                <p>
+                  Another fun fact: my mother went through massive weight loss
+                  (you can check if you look at some of the photos in the next
+                  section).
+                </p>
+              </details>
+
+              <aside>
+                Both of them have been working their lives off for as long as I
+                can remember, all this I owe to them.
+              </aside>
+            </dd>
+          </dl>
+        </section>
+
+        <figure>
+          <img src="fam/parents.jpg" />
+          <figcaption>Photo of my parents</figcaption>
+        </figure>
+      </div>
+
+      <p style="margin: 10px 0px 10px 0">
+        PS: nahutdan kog ideas style ani so gradient bg nlng hehe
+      </p>
+    </section>
+
+    <!-- Final album featuring other important people -->
+    <section title="album" id="album" class="album">
+      <h2>
+        <strong
+          >FEATURING&emsp;<i><span style="font-size: 30px">MORE</span></i
+          >&emsp; PICTURES OF THE CLOSEST PEOPLE IN MY LIFE</strong
+        >
+      </h2>
+
+      <div class="row">
+        <div class="column">
+          <img src="cascade/pic1.png" />
+          <img src="cascade/pic10.jpg" />
+          <img src="cascade/pic11.jpg" />
+          <img src="cascade/pic12.png" />
+          <img src="cascade/pic13.jpg" />
+          <img src="cascade/pic14.jpg" />
+          <img src="cascade/pic29.jpg" />
+          <img src="cascade/pic31.jpg" />
+          <img src="cascade/pic4.jpg" />
+          <img src="cascade/pic8.jpg" />
+        </div>
+        <div class="column">
+          <img src="cascade/pic15.jpg" />
+          <img src="cascade/pic16.jpg" />
+          <img src="cascade/pic17.jpg" />
+          <img src="cascade/pic19.jpg" />
+          <img src="cascade/pic2.png" />
+          <img src="cascade/pic3.jpg" />
+          <img src="cascade/pic32.jpg" />
+          <img src="cascade/pic5.jpg" />
+        </div>
+        <div class="column">
+          <img src="cascade/pic20.jpg" />
+          <img src="cascade/pic21.jpg" />
+          <img src="cascade/pic22.jpg" />
+          <img src="cascade/pic23.jpg" />
+          <img src="cascade/pic24.jpg" />
+          <img src="cascade/pic30.jpg" />
+          <img src="cascade/pic33.jpg" />
+          <img src="cascade/pic6.png" />
+        </div>
+        <div class="column">
+          <img src="cascade/pic25.jpg" />
+          <img src="cascade/pic25.jpg" />
+          <img src="cascade/pic26.jpg" />
+          <img src="cascade/pic27.jpg" />
+          <img src="cascade/pic28.png" />
+          <img src="cascade/pic30.jpg" />
+          <img src="cascade/pic34.jpg" />
+          <img src="cascade/pic7.jpg" />
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <h2>
+        <strong
+          >KUDOS TO AN EXTERNAL SITE FOR THE BASE CODE FOR THIS IMAGE
+          GRID</strong
+        >
+      </h2>
+
+      <iframe
+        src="extra-site-for-iframe.html"
+        title="W3Schools Free Online Web Tutorials"
+        width="750"
+        height="260"
+      >
+      </iframe>
+
+      <p>
+        the <kbd>code</kbd> was mostly
+        <dfn><abbr title="Cascading Style Sheets">CSS</abbr></dfn> with multiple
+        <code>.row {}</code> and <code>.column {}</code> stylings which i then
+        put inside a parent <code>.album {}</code> class.
+      </p>
+      <pre style="color: black">
+        all of those formatting is required to properly form the grid
+      </pre>
+      <br />
+      <embed type="image/jpg" src="w33.png" width="750" height="100%" />
+
+      <dialog open>
+        &emsp;&emsp;^ I learned the barebones of the image grid in the shown
+        website ^&emsp;&emsp;<br />
+        <q>&emsp;www.w3schools.com&emsp; </q>
+      </dialog>
+    </section>
+
+    <!-- Contact section nani diri -->
+    <section title="contact-section" id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <p>THANK YOU FOR YOUR</p>
+        <h2>TIME</h2>
+        <br />
+        <table class="accounts">
+          <colgroup>
+            <col span="5" style="background-color: rgba(256, 256, 256, 0.1)" />
+          </colgroup>
+          <thead>
+            <th colspan="5">LINKS TO MY ACCOUNTS</th>
+          </thead>
+          <tbody>
+            <th colspan="5">
+              <s
+                >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</s
+              >
+            </th>
+            <tr>
+              <td>
+                <a
+                  href="https://web.facebook.com/cliffraycee.jabines"
+                  target="_blank"
+                >
+                  <img src="icons/facebook.png" />
+                </a>
+              </td>
+              <td>
+                <a
+                  href="https://www.instagram.com/onthecliffside/"
+                  target="_blank"
+                  ><img src="icons/instagram.png" />
+                </a>
+              </td>
+              <td>
+                <a
+                  href="https://www.youtube.com/channel/UCjbvf_aFnkP1tZnePqB4XDQ"
+                  target="_blank"
+                  ><img src="icons/youtube.png" />
+                </a>
+              </td>
+              <td>
+                <a href="https://twitter.com/cleppord" target="_blank"
+                  ><img src="icons/twitter.png" />
+                </a>
+              </td>
+              <td>
+                <a
+                  href="https://www.linkedin.com/in/cliff-raycee-abb06821a/"
+                  target="_blank"
+                  ><img src="icons/linkedin.png" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <th colspan="5">
+              <s
+                >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</s
+              >
+            </th>
+          </tfoot>
+        </table>
+
+        <small>
+          <a href=" "> BACK TO THE TOP <sub> (or to the start :) </sub> </a>
+        </small>
+      </div>
+    </section>
+
+    <footer>
+      <address>
+        Created by Cliff Raycee B. Jabines<abbr
+          title="Bachelor of Science in Computer Science - 1"
+        >
+          BSCS - 1</abbr
+        >&emsp;&emsp;Web Systems and Technologies Lab - Activity #4
+      </address>
+    </footer>
+  </body>
+</main>
