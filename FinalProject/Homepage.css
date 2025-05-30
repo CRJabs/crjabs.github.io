@@ -65,6 +65,7 @@ a {
 .nav h1 {
   margin-left: 5%;
   margin-top: 18px;
+  margin-bottom: 18px;
   font-family: "Outfit", sans-serif;
   text-align: center;
   color: #333;
@@ -120,7 +121,7 @@ a {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  height: 110vh;
+  height: 120vh;
   width: 100vw;
   background-image: url(testbg.png);
   background-size: cover;
@@ -133,6 +134,14 @@ a {
   margin: 5% auto 6rem auto;
   color: #333;
   border-bottom: 0.2rem solid white;
+}
+
+.projects-section > h1 {
+  font-family: inherit;
+  font-size: 5rem;
+  /* max-width: 900px; */
+  margin: -50px auto 3% auto;
+  color: #333;
 }
 
 .projects-grid {
@@ -167,4 +176,80 @@ a {
   font-size: 1.8rem;
   padding: 2rem 0.5rem;
   color: white;
+}
+
+/* Carousel */
+
+.carousel-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  height: 90vh;
+  width: 100vw;
+  background-image: url(testbg.png);
+  background-size: cover;
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 24px;
+  padding: 16px 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.carousel-item {
+  min-width: 440px;
+  flex: 0 0 auto;
+  text-align: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 12px;
+}
+.carousel-item img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.carousel-title {
+  margin: 24px auto;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+}
+.carousel-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.carousel-btn:hover {
+  opacity: 1;
+}
+.carousel-btn.left {
+  margin-right: 8px;
+}
+.carousel-btn.right {
+  margin-left: 8px;
 }

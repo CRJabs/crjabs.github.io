@@ -14,49 +14,50 @@
     </div>
 
     <nav title="navigation-bar" class="nav" id="navbar">
-      <h1>Projects Homepage</h1>
+      <h1>School Projects Showcase</h1>
     </nav>
 
     <section id="home" class="home">
-      <h1>Take a look at my Finished works</h1>
+      <h1>Take a look at some of my School Projects</h1>
       <a href="#projects">
         <img src="black arrow.png" style="height: 35px" />
       </a>
     </section>
 
     <section id="projects" class="projects-section">
+      <h1>Old School Works</h1>
       <div class="projects-grid">
-        <a href="../Activity 2/AboutMe.html" class="project project-tile" target="_blank">
+        <a href="../Activity 2/AboutMe.html" class="project project-tile">
           <img class="project-image" src="aboutme.png" alt="project" />
           <p class="project-title">About Me WebPage</p>
         </a>
 
-        <a href="../Activity 4/Family.html" class="project project-tile" target="_blank">
+        <a href="../Activity 4/Family.html" class="project project-tile">
           <img class="project-image" src="family.png" alt="project" />
           <p class="project-title">My Family WebPage</p>
         </a>
 
-        <a href="../Activity 5/ACTIVITY 5.html" class="project project-tile" target="_blank">
+        <a href="../Activity 5/ACTIVITY 5.html" class="project project-tile">
           <img class="project-image" src="cssunits.png" alt="project" />
           <p class="project-title">CSS UNITS, COLORS, AND BG IMAGES</p>
         </a>
 
-        <a href="../Activity 6/MyPhotos.html" class="project project-tile" target="_blank">
+        <a href="../Activity 6/MyPhotos.html" class="project project-tile">
           <img class="project-image" src="myphotos.png" alt="project" />
           <p class="project-title">My Photos</p>
         </a>
 
-        <a href="../Activity 7/quote1.html" class="project project-tile" target="_blank">
+        <a href="../Activity 7/quote1.html" class="project project-tile">
           <img class="project-image" src="quotes.png" alt="project" />
           <p class="project-title">Quotes WebPage</p>
         </a>
 
-        <a href="../Activity 8/me1.html" class="project project-tile" target="_blank">
+        <a href="../Activity 8/me1.html" class="project project-tile">
           <img class="project-image" src="me.png" alt="project" />
           <p class="project-title">Mee WebPage</p>
         </a>
 
-        <a href="../Activity 9/myVideo.html" class="project project-tile" target="_blank">
+        <a href="../Activity 9/myVideo.html" class="project project-tile">
           <img class="project-image" src="vlo.png" alt="project" />
           <p class="project-title">Life in UB Vlog</p>
         </a>
@@ -64,27 +65,123 @@
         <a
           href="../Activity 10/friendRegistry.html"
           class="project project-tile"
-           target="_blank"
         >
           <img class="project-image" src="form.png" alt="project" />
           <p class="project-title">Survey Form WebPage</p>
         </a>
 
-        <a href="../Activity 11/related.html" class="project project-tile" target="_blank">
+        <a href="../Activity 11/related.html" class="project project-tile">
           <img class="project-image" src="namelist.png" alt="project" />
           <p class="project-title">NameList WebPage</p>
         </a>
 
-        <a href="../Activity 12/quotations.html" class="project project-tile" target="_blank">
+        <a href="../Activity 12/quotations.html" class="project project-tile">
           <img class="project-image" src="quoteagain.png" alt="project" />
           <p class="project-title">More Quotes WebPage</p>
         </a>
 
-        <a href="../MIDTERM/Midterm Project.html" class="project project-tile" target="_blank">
+        <a href="../MIDTERM/Midterm Project.html" class="project project-tile">
           <img class="project-image" src="midterm.png" alt="project" />
           <p class="project-title">Midterm Project</p>
         </a>
       </div>
+    </section>
+
+    <section id="home" class="home">
+      <h1>here's some of my most recent Ones</h1>
+      <a href="#new-projects">
+        <img src="black arrow.png" style="height: 35px" />
+      </a>
+    </section>
+
+    <section id="new-projects" class="carousel-section">
+      <div class="carousel-container">
+        <div class="carousel" id="carousel">
+          <div class="carousel-item">
+            <img src="proj1.png" alt="Recent Project 1" />
+            <div class="carousel-title">UBYTeS Attendance System</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj2.png" alt="Recent Project 2" />
+            <div class="carousel-title">CETAFA Attendance System</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj3.png" alt="Recent Project 3" />
+            <div class="carousel-title">Sorting Algorithm Visualizer</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj4.png" alt="Recent Project 4" />
+            <div class="carousel-title">Hand Gestures for Windows Navigation</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj5.png" alt="Recent Project 5" />
+            <div class="carousel-title">Mini-Photoshop</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj6.png" alt="Recent Project 6" />
+            <div class="carousel-title">StoreIt!: Inventory Management System</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj7.png" alt="Recent Project 7" />
+            <div class="carousel-title">BytePoint: Medal Tally System</div>
+          </div>
+          <div class="carousel-item">
+            <img src="proj8.png" alt="Recent Project 8" />
+            <div class="carousel-title">Auto-Locking Medicine Box</div>
+          </div>
+          <!-- Add more carousel-item blocks as needed -->
+        </div>
+      </div>
+
+      <script>
+      // Infinite seamless carousel scroll with auto-scroll to the right
+      document.addEventListener('DOMContentLoaded', function () {
+        const carousel = document.getElementById('carousel');
+        const items = Array.from(carousel.children);
+        const itemCount = items.length;
+        const itemWidth = items[0].offsetWidth + 24; // 24px gap
+
+        // Clone items for seamless effect
+        items.forEach(item => {
+          const clone = item.cloneNode(true);
+          clone.classList.add('clone');
+          carousel.appendChild(clone);
+        });
+
+        // Set carousel scroll position to start of original items
+        carousel.scrollLeft = 0;
+
+        // Handle scroll to create infinite effect
+        carousel.addEventListener('scroll', function () {
+          if (carousel.scrollLeft >= itemWidth * itemCount) {
+        // Jump back to start of originals
+        carousel.scrollLeft -= itemWidth * itemCount;
+          } else if (carousel.scrollLeft <= 0) {
+        // Jump to end of originals
+        carousel.scrollLeft += itemWidth * itemCount;
+          }
+        });
+
+        // Optional: Add left/right buttons for navigation
+        window.scrollCarousel = function(direction) {
+          carousel.scrollBy({ left: direction * itemWidth, behavior: 'smooth' });
+        };
+
+        // Auto-scroll to the right
+        let autoScrollInterval = setInterval(() => {
+          carousel.scrollBy({ left: 2, behavior: 'auto' }); // Adjust speed by changing the value
+        }, 8); // Adjust interval for smoothness/speed
+
+        // Pause auto-scroll on mouse enter, resume on mouse leave
+        carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+        carousel.addEventListener('mouseleave', () => {
+          autoScrollInterval = setInterval(() => {
+        carousel.scrollBy({ left: 2, behavior: 'auto' });
+          }, 8);
+        });
+      });
+      </script>
+      
     </section>
   </body>
 </main>
